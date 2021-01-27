@@ -1,0 +1,18 @@
+endnumber = int(input("Введіть інтервал: "))
+number = random.randint(1, endnumber)
+sproba = int(input("Введіть кількість спроб: "))
+gameover = True
+
+for i in range(sproba):
+    a = int(input("Введіть число: "))
+    if a > number:
+        print("Менше")
+    elif a < number:
+        print("Більше")
+    else:
+        print("Ви вгадали це число " + str(a))
+        gameover = False
+        break
+
+if gameover == True:
+    print("Спроби закінчились, ви програли(")
